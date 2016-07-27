@@ -3,6 +3,17 @@
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int a = 10;
+        int b = 20;
+
+        System.out.print("a = " + a);
+        System.out.println(", b = " + b);
+
+        a = a + b; // a = 30
+        b = a - b; // 10
+        a = a - b; // 20
+
+        System.out.print("a = " + a);
+        System.out.println(", b = " + b);
     }
 }
