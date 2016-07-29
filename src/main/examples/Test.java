@@ -1,16 +1,36 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int[] arr = {2, 5, 3, 7};
 
-        int i = scanner.nextInt();
+        /*System.out.println(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println(printArray(arr));*/
 
-        if (i % 2 == 0) {
-            System.out.println("Number " + i + " is even");
-        } else {
-            System.out.println("Number " + i + " is not even");
-        }
-
+        System.out.println(subString("Hello world", 2, 6));
     }
+
+    static String printArray(int[] arr){
+        String res = "[";
+        for (int i = 0; i < arr.length; i++) {
+            /*if (i == arr.length - 1) {
+                res = res + arr[i];
+            } else {
+                res = res + arr[i] + ", ";
+            }*/
+            res = i == arr.length - 1 ? res + arr[i] : res + arr[i] + ", ";
+        }
+        return res + "]";
+    }
+
+    static String subString(String str, int from, int to){
+        String res = "";
+        char[] chars = str.toCharArray();
+        for (int i = from; i < to; i++) {
+            res = res + chars[i];
+        }
+        return res;
+    }
+
 }
